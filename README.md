@@ -1,3 +1,26 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local bloqueados = {
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+    ["nome"] = true,
+}
+
+if bloqueados[player.Name] then
+    player:Kick("Você não tem autorização para usar este script.")
+    return
+end
+
 CoreGui = game:GetService("CoreGui")
 
 if CoreGui:findFirstChild("FTFXEXECUTED") then
